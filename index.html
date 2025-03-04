@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Page</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* Global Styles */
         body {
@@ -160,14 +162,19 @@
             margin-bottom: 40px;
         }
 
-        .contact a {
-            margin: 0 10px;
-            font-size: 1.1rem;
-            color: #2d5c9a;
-            font-weight: bold;
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
-        .contact a:hover {
+        .contact-icons a {
+            font-size: 2rem;
+            color: #2d5c9a;
+            transition: color 0.3s ease;
+        }
+
+        .contact-icons a:hover {
             color: #3b7dd8;
         }
 
@@ -207,12 +214,16 @@
             .project-card {
                 padding: 15px;
             }
+
+            .contact-icons a {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1> ALAMBO T. KELTA </h1>
+        <h1>ALAMBO T. KELTA</h1>
         <nav>
             <a href="#about-me">About Me</a>
             <a href="#projects">Projects</a>
@@ -223,7 +234,7 @@
         <!-- About Me Section -->
         <div id="about-me" class="about-me">
             <h2>About Me</h2>
-            <p>I am a  Computer Science graduate from the University of Electronic Science and Technology of China (UESTC), one of China's leading institutions. During my school years I have developed a strong foundation in IT and data science, with a particular passion for database management, data analysis, and software development. My bachelor's thesis, "Analysis of Insurance Data Using Multilayer Networks," reflects my ability to tackle complex problems and apply advanced technical skills to real-world challenges. I thrive in dynamic environments where I can leverage my expertise in programming, database design, and distributed computing to create innovative solutions. My goal is to contribute my skills and knowledge to the tech industry, driving productivity and innovation through cutting-edge technology.</p>
+            <p>I am a Computer Science graduate from the University of Electronic Science and Technology of China (UESTC), one of China's leading institutions. During my school years, I developed a strong foundation in IT and data science, with a particular passion for database management, data analysis, and software development. My bachelor's thesis, "Analysis of Insurance Loss Using Multilayer Networks," reflects my ability to tackle complex problems and apply advanced technical skills to real-world challenges. I thrive in dynamic environments where I can leverage my expertise in programming, database design, and distributed computing to create innovative solutions. My goal is to contribute my skills and knowledge to the tech industry, driving productivity and innovation through cutting-edge technology.</p>
         </div>
 
         <!-- Projects Section -->
@@ -251,7 +262,7 @@
                 <!-- Project 4 -->
                 <div class="project-card">
                     <h3>Programming on Windows</h3>
-                    <p>In project 1 we created a bank transaction system using the concepts of Windows process and threads sychronization mechanisms. This sytstem allows 3 people(admins) login to the system to see the details about withdrawal and deposit amount in each day of the week. The system also displays the transaction summary of the five days of the week. Project 2 and 3 are the same system with Windows GDI and MFC inplementations respectively.</p>
+                    <p>In project 1, we created a bank transaction system using the concepts of Windows process and thread synchronization mechanisms. This system allows 3 people (admins) to log in to the system to see the details about withdrawal and deposit amounts for each day of the week. The system also displays the transaction summary for the five days of the week. Projects 2 and 3 are the same system with Windows GDI and MFC implementations, respectively.</p>
                     <a href="https://github.com/tarekegn82/Programming-on-windows" target="_blank">View Project</a>
                 </div>
             </div>
@@ -266,10 +277,14 @@
         <!-- Contact Section -->
         <div id="contact" class="contact">
             <h2>Contact Me</h2>
-            <p>
-                <a href="https://github.com/tarekegn-git">GitHub</a> |
-                <a href="https://www.linkedin.com/in/tarekegn-k-alambo-60354a18b/">LinkedIn</a>
-            </p>
+            <div class="contact-icons">
+                <a href="https://github.com/tarekegn-git" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/tarekegn-k-alambo-60354a18b/" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
         </div>
     </div>
 </body>
