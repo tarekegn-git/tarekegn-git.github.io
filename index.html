@@ -5,43 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PostgreSQL Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f4; text-align: center; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #2d5c9a; }
-        h2 { color: #3b7dd8; }
-        .projects { text-align: left; margin-top: 20px; }
-        pre { background: #272822; color: #fff; padding: 10px; border-radius: 5px; text-align: left; overflow-x: auto; }
-        .contact a { text-decoration: none; color: #0073e6; font-weight: bold; }
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 40px; 
+            background-color: #f4f4f4; 
+            text-align: center; 
+        }
+        .container { 
+            max-width: 900px; 
+            margin: auto; 
+            background: white; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        }
+        h1 { 
+            color: #2d5c9a; 
+        }
+        h2 { 
+            color: #3b7dd8; 
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #2d5c9a;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #3b7dd8;
+        }
+        .about-me, .skills, .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .project-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(50% - 40px);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .project-card h3 {
+            margin-top: 0;
+        }
+        .project-card a {
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
+        }
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+        pre { 
+            background: #272822; 
+            color: #fff; 
+            padding: 10px; 
+            border-radius: 5px; 
+            text-align: left; 
+            overflow-x: auto; 
+        }
+        .contact a { 
+            text-decoration: none; 
+            color: #0073e6; 
+            font-weight: bold; 
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🚀 PostgreSQL Portfolio</h1>
-        <p>Welcome to my database project portfolio showcasing my expertise in PostgreSQL.</p>
+        <nav>
+            <a href="#about-me">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-        <h2>📌 Featured Projects</h2>
-        <div class="projects">
-            <h3>1️⃣ Business Database Design</h3>
-            <p>Designed a relational database for an online store, implementing indexing and foreign key constraints.</p>
-
-            <h3>2️⃣ Performance Optimization</h3>
-            <p>Used indexing, query restructuring, and `EXPLAIN ANALYZE` to optimize PostgreSQL queries.</p>
+        <div id="about-me" class="about-me">
+            <h2>About Me</h2>
+            <p>Welcome to my database project portfolio showcasing my expertise in PostgreSQL. I am passionate about database design, optimization, and data analysis.</p>
         </div>
 
-        <h2>🔍 Sample SQL Query</h2>
-        <pre>
-SELECT customer_name, COUNT(*) AS orders
-FROM orders
-GROUP BY customer_name
-ORDER BY COUNT(*) DESC
-LIMIT 10;
-        </pre>
+        <div id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>PostgreSQL Database Creation and Queries</h3>
+                <p>This project demonstrates my skills in creating and manipulating databases using PostgreSQL. It includes examples of complex queries and database design.</p>
+                <a href="https://github.com/tarekegn-git/postgreSQL-creating-database-manipulation-and-quiries/edit/main/README.md" target="_blank">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Popular Movies SQL Project</h3>
+                <p>This project involves data preparation and analysis using SQL. It showcases my ability to work with large datasets and perform data manipulation tasks.</p>
+                <a href="https://github.com/tarekegn-git/popular_movies_sql/blob/main/data_preparation_mysql.md" target="_blank">View Project</a>
+            </div>
+        </div>
 
-        <h2> Contact Me</h2>
-        <p class="contact">
-            <a href="https://github.com/tarekegn-git">GitHub</a> |
-            <a href="https://www.linkedin.com/in/tarekegn-k-alambo-60354a18b/">LinkedIn</a>
-        </p>
+        <div id="skills" class="skills">
+            <h2>Skills</h2>
+            <p>PostgreSQL | Database Design | Query Optimization | Data Analysis | SQL</p>
+        </div>
+
+        <div id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>
+                <a href="https://github.com/tarekegn-git">GitHub</a> |
+                <a href="https://www.linkedin.com/in/tarekegn-k-alambo-60354a18b/">LinkedIn</a>
+            </p>
+        </div>
     </div>
 </body>
 </html>
