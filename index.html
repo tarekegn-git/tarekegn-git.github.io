@@ -3,89 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PostgreSQL Portfolio</title>
+    <title>Portfolio Page</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 40px; 
-            background-color: #f4f4f4; 
-            text-align: center; 
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
         }
-        .container { 
-            max-width: 900px; 
-            margin: auto; 
-            background: white; 
-            padding: 20px; 
-            border-radius: 10px; 
-            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
-        h1 { 
-            color: #2d5c9a; 
+
+        h1, h2, h3 {
+            color: #2d5c9a;
         }
-        h2 { 
-            color: #3b7dd8; 
-        }
-        nav {
+
+        h1 {
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #2d5c9a;
-            font-weight: bold;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
         }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Navigation Menu */
+        nav {
+            background-color: #2d5c9a;
+            padding: 10px 0;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
         nav a:hover {
             color: #3b7dd8;
         }
-        .about-me, .skills, .contact {
+
+        /* About Me Section */
+        .about-me {
             text-align: center;
-            margin-top: 20px;
+            margin-bottom: 40px;
         }
+
+        .about-me p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Projects Section */
         .projects {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
-            margin-top: 20px;
+            margin-bottom: 40px;
         }
+
         .project-card {
-            background: #f9f9f9;
+            background: #fff;
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 20px;
             width: calc(50% - 40px);
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
         .project-card h3 {
             margin-top: 0;
+            color: #2d5c9a;
         }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
         .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #2d5c9a;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-card a:hover {
+            background-color: #3b7dd8;
             text-decoration: none;
-            color: #0073e6;
+        }
+
+        /* Skills Section */
+        .skills {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .skills p {
+            font-size: 1.2rem;
+            color: #2d5c9a;
             font-weight: bold;
         }
-        .project-card a:hover {
-            text-decoration: underline;
+
+        /* Contact Section */
+        .contact {
+            text-align: center;
+            margin-bottom: 40px;
         }
-        pre { 
-            background: #272822; 
-            color: #fff; 
-            padding: 10px; 
-            border-radius: 5px; 
-            text-align: left; 
-            overflow-x: auto; 
+
+        .contact a {
+            margin: 0 10px;
+            font-size: 1.1rem;
+            color: #2d5c9a;
+            font-weight: bold;
         }
-        .contact a { 
-            text-decoration: none; 
-            color: #0073e6; 
-            font-weight: bold; 
+
+        .contact a:hover {
+            color: #3b7dd8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-card {
+                width: calc(100% - 40px);
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+
+            .project-card {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🚀 PostgreSQL Portfolio</h1>
+        <h1>🚀 Portfolio Page</h1>
         <nav>
             <a href="#about-me">About Me</a>
             <a href="#projects">Projects</a>
@@ -93,11 +213,13 @@
             <a href="#contact">Contact</a>
         </nav>
 
+        <!-- About Me Section -->
         <div id="about-me" class="about-me">
             <h2>About Me</h2>
-            <p>Welcome to my database project portfolio showcasing my expertise in PostgreSQL. I am passionate about database design, optimization, and data analysis.</p>
+            <p>I am a hardworking, self-motivated, and disciplined Computer Science graduate  from one of China's top universities (UESTC). I finished my bachelor's degree requirements and graduated from UESTC in June 2022. I am  an IT and data science enthusiast with proven technical and problem-solving skills in big data analysis and technical skills. I worked on the Analysis of Insurance Data Using Multilayer Networks for my bachelor thesis.  I would like to apply my IT skills and related experiences to the productivity of tech industries.</p>
         </div>
 
+        <!-- Projects Section -->
         <div id="projects" class="projects">
             <h2>Projects</h2>
             <div class="project-card">
@@ -112,11 +234,13 @@
             </div>
         </div>
 
+        <!-- Skills Section -->
         <div id="skills" class="skills">
             <h2>Skills</h2>
             <p>PostgreSQL | Database Design | Query Optimization | Data Analysis | SQL</p>
         </div>
 
+        <!-- Contact Section -->
         <div id="contact" class="contact">
             <h2>Contact Me</h2>
             <p>
