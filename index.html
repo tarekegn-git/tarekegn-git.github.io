@@ -13,6 +13,7 @@
             background-color: #f4f4f9;
             color: #333;
             line-height: 1.6;
+            text-align: center; /* Center all text by default */
         }
 
         .container {
@@ -75,7 +76,6 @@
 
         /* About Me Section */
         .about-me {
-            text-align: center;
             margin-bottom: 40px;
         }
 
@@ -83,15 +83,23 @@
             max-width: 800px;
             margin: 0 auto;
             font-size: 1.1rem;
+            text-align: left; /* Align text to the left for readability */
         }
 
         /* Projects Section */
         .projects {
+            margin-bottom: 40px;
+        }
+
+        .projects h2 {
+            text-align: center; /* Center the "Projects" title */
+        }
+
+        .project-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center;
-            margin-bottom: 40px;
+            justify-content: center; /* Center project cards horizontally */
         }
 
         .project-card {
@@ -99,9 +107,10 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 20px;
-            width: calc(50% - 40px);
+            width: calc(50% - 40px); /* Two cards per row */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left; /* Align text to the left inside cards */
         }
 
         .project-card:hover {
@@ -137,7 +146,6 @@
 
         /* Skills Section */
         .skills {
-            text-align: center;
             margin-bottom: 40px;
         }
 
@@ -149,7 +157,6 @@
 
         /* Contact Section */
         .contact {
-            text-align: center;
             margin-bottom: 40px;
         }
 
@@ -167,7 +174,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .project-card {
-                width: calc(100% - 40px);
+                width: calc(100% - 40px); /* Stack cards vertically on smaller screens */
             }
 
             h1 {
@@ -216,21 +223,23 @@
         <!-- About Me Section -->
         <div id="about-me" class="about-me">
             <h2>About Me</h2>
-            <p>I am a hardworking, self-motivated, and disciplined Computer Science graduate  from one of China's top universities (UESTC). I finished my bachelor's degree requirements and graduated from UESTC in June 2022. I am  an IT and data science enthusiast with proven technical and problem-solving skills in big data analysis and technical skills. I worked on the Analysis of Insurance Data Using Multilayer Networks for my bachelor thesis.  I would like to apply my IT skills and related experiences to the productivity of tech industries.</p>
+            <p>I am a hardworking, self-motivated, and disciplined Computer Science graduate from one of China's top universities (UESTC). I finished my bachelor's degree requirements and graduated from UESTC in June 2022. I am an IT and data science enthusiast with proven technical and problem-solving skills in big data analysis and technical skills. I worked on the Analysis of Insurance Data Using Multilayer Networks for my bachelor thesis. I would like to apply my IT skills and related experiences to the productivity of tech industries.</p>
         </div>
 
         <!-- Projects Section -->
         <div id="projects" class="projects">
             <h2>Projects</h2>
-            <div class="project-card">
-                <h3>PostgreSQL Database Creation and Queries</h3>
-                <p>This project demonstrates my skills in creating and manipulating databases using PostgreSQL. It includes examples of complex queries and database design.</p>
-                <a href="https://github.com/tarekegn-git/postgreSQL-creating-database-manipulation-and-quiries/edit/main/README.md" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Popular Movies SQL Project</h3>
-                <p>This project involves data preparation and analysis using SQL. It showcases my ability to work with large datasets and perform data manipulation tasks.</p>
-                <a href="https://github.com/tarekegn-git/popular_movies_sql/blob/main/data_preparation_mysql.md" target="_blank">View Project</a>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>PostgreSQL Database Creation and Queries</h3>
+                    <p>This project demonstrates my skills in creating and manipulating databases using PostgreSQL. It includes examples of complex queries and database design.</p>
+                    <a href="https://github.com/tarekegn-git/postgreSQL-creating-database-manipulation-and-quiries/edit/main/README.md" target="_blank">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Popular Movies SQL Project</h3>
+                    <p>This project involves data preparation and analysis using SQL. It showcases my ability to work with large datasets and perform data manipulation tasks.</p>
+                    <a href="https://github.com/tarekegn-git/popular_movies_sql/blob/main/data_preparation_mysql.md" target="_blank">View Project</a>
+                </div>
             </div>
         </div>
 
