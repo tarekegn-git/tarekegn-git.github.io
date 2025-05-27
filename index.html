@@ -15,13 +15,56 @@
             background-color: #f4f4f9;
             color: #333;
             line-height: 1.6;
-            text-align: center; /* Center all text by default */
+            display: flex;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            flex: 1;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: #2d5c9a;
+            color: white;
+            padding: 20px;
+            min-height: 100vh;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h3 {
+            color: #fff;
+            border-bottom: 1px solid #3b7dd8;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            display: block;
+            padding: 8px 0;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #3b7dd8;
+            padding-left: 5px;
+        }
+
+        .sidebar .course-title {
+            font-weight: bold;
+            color: #f4f4f9;
+            margin-top: 15px;
+        }
+
+        .sidebar .resource-link {
+            font-size: 0.9em;
+            margin-left: 10px;
+            margin-bottom: 5px;
         }
 
         h1, h2, h3 {
@@ -179,6 +222,35 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            body {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                min-height: auto;
+                padding: 20px 0;
+            }
+            
+            .sidebar h3 {
+                text-align: center;
+            }
+            
+            .sidebar-content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .sidebar a {
+                padding: 5px 15px;
+                background: rgba(255,255,255,0.1);
+                border-radius: 5px;
+            }
+        }
+
         @media (max-width: 768px) {
             .project-card {
                 width: calc(100% - 40px); /* Stack cards vertically on smaller screens */
@@ -222,6 +294,30 @@
     </style>
 </head>
 <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>Learning Resources</h3>
+        <div class="sidebar-content">
+            <div>
+                <div class="course-title">Web Development:</div>
+                <a href="https://www.freecodecamp.org/learn" target="_blank" class="resource-link">freeCodeCamp - Full Stack Development</a>
+                <a href="https://developer.mozilla.org/en-US/" target="_blank" class="resource-link">MDN Web Docs - Web References</a>
+                <a href="https://www.theodinproject.com/" target="_blank" class="resource-link">The Odin Project - Web Dev Path</a>
+                
+                <div class="course-title">Data Analysis:</div>
+                <a href="https://www.coursera.org/professional-certificates/google-data-analytics" target="_blank" class="resource-link">Google Data Analytics Certificate</a>
+                <a href="https://www.kaggle.com/learn" target="_blank" class="resource-link">Kaggle - Data Science Courses</a>
+                <a href="https://www.datacamp.com/" target="_blank" class="resource-link">DataCamp - Data Science</a>
+                
+                <div class="course-title">Programming:</div>
+                <a href="https://www.codecademy.com/" target="_blank" class="resource-link">Codecademy - Interactive Coding</a>
+                <a href="https://www.edx.org/cs50" target="_blank" class="resource-link">Harvard CS50 - Computer Science</a>
+                <a href="https://www.udacity.com/" target="_blank" class="resource-link">Udacity - Nanodegree Programs</a>
+                <a href="https://exercism.org/" target="_blank" class="resource-link">Exercism - Coding Practice</a>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <h1>ALAMBO T. KELTA</h1>
         <nav>
@@ -288,8 +384,6 @@
                 <a href="https://www.linkedin.com/in/tarekegn-k-alambo-60354a18b/" target="_blank" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                
-                    
             </div>
         </div>
     </div>
